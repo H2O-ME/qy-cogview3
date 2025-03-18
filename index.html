@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>清言AI | CogView-3</title>
+    <title>清言AI | 图像生成</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-dark.min.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
@@ -17,7 +17,7 @@
             <div class="logo">
                 <div class="logo-icon"></div>
                 <div class="model-info">
-                    <div class="model-name">清言生图AI</div>
+                    <div class="model-name">清言AI图像生成</div>
                     <div class="model-version">Powered by CogView-3</div>
                 </div>
             </div>
@@ -30,17 +30,20 @@
         </div>
         <div class="main">
             <div class="header">
-                <h1>清言生图AI</h1>
+                <h1>清言AI图像生成</h1>
             </div>
             <div class="chat-container" id="chat-container">
                 <div class="welcome-message">
-                    <h2>欢迎使用清言AI图像生成模型</h2>
+                    <h2>欢迎使用清言AI图像生成服务</h2>
                     <p>清言AI现已支持CogView-3模型，请输入您的描述文本来生成图像。</p>
                 </div>
                 <!-- 聊天消息会在这里动态添加 -->
             </div>
             <div class="input-container">
                 <textarea id="user-input" placeholder="描述您想要生成的图像..." rows="1"></textarea>
+                <button id="settings-btn" class="settings-btn" title="图像设置">
+                    <i class="ri-settings-3-line"></i>
+                </button>
                 <button id="send-btn" class="send-btn">
                     <i class="ri-send-plane-fill"></i>
                 </button>
@@ -52,4 +55,4 @@
     </div>
     <script src="script.js"></script>
 </body>
-</html>
+</html> 

@@ -105,8 +105,22 @@ document.addEventListener('DOMContentLoaded', function() {
     newChatButton.addEventListener('click', function() {
         chatContainer.innerHTML = `
             <div class="welcome-message">
-                <h2>欢迎使用清言AI图像生成服务</h2>
+                <h2>欢迎使用清言AI图像生成</h2>
                 <p>这是一个基于CogView-3模型的AI图像生成应用，请输入您的描述文本来生成图像。</p>
+                <div class="welcome-features">
+                    <div class="feature">
+                        <i class="ri-image-line"></i>
+                        <span>高质量图像生成</span>
+                    </div>
+                    <div class="feature">
+                        <i class="ri-chat-smile-line"></i>
+                        <span>自然语言描述</span>
+                    </div>
+                    <div class="feature">
+                        <i class="ri-download-line"></i>
+                        <span>一键下载保存</span>
+                    </div>
+                </div>
             </div>
         `;
     });
@@ -350,6 +364,83 @@ document.addEventListener('DOMContentLoaded', function() {
             updateBotMessageWithError(botMessageElement, "抱歉，图像生成失败。错误信息: " + error.message);
         }
     }
+    
+    // 添加自定义头像和颜色样式
+    const customStyles = document.createElement('style');
+    customStyles.textContent = `
+        /* 头像替换 */
+        .logo-icon {
+            background-image: url('https://img.picui.cn/free/2025/03/17/67d8459d88fbf.png') !important;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .bot-avatar {
+            background-image: url('https://img.picui.cn/free/2025/03/17/67d8459d88fbf.png') !important;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        /* 蓝白主题颜色替换 */
+        body {
+            background: linear-gradient(to bottom right, #f8fafc, #f1f5f9);
+        }
+        
+        .logo-icon {
+            box-shadow: 0 4px 10px rgba(59, 130, 246, 0.15);
+        }
+        
+        .new-chat-btn, .send-btn {
+            background: linear-gradient(135deg, #3b82f6, #60a5fa);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+        }
+        
+        .new-chat-btn:hover, .send-btn:hover {
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.3);
+        }
+        
+        .model-name, .theme-toggle i {
+            color: #3b82f6;
+        }
+        
+        .header h1 {
+            background: linear-gradient(90deg, #3b82f6, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .user-message {
+            background: linear-gradient(135deg, #dbeafe, #eff6ff);
+            border-left: 1px solid rgba(59, 130, 246, 0.2);
+            border-top: 1px solid rgba(59, 130, 246, 0.1);
+        }
+        
+        .bot-message {
+            border-left: 1px solid rgba(59, 130, 246, 0.1);
+            border-top: 1px solid rgba(59, 130, 246, 0.05);
+        }
+        
+        .download-btn {
+            background: linear-gradient(135deg, #3b82f6, #60a5fa);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+        }
+        
+        .download-btn:hover {
+            background: linear-gradient(135deg, #4f8df9, #7ab3fb);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #bfdbfe;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3b82f6;
+        }
+    `;
+    document.head.appendChild(customStyles);
     
     // 添加深色模式CSS
     const darkThemeStyle = document.createElement('style');
@@ -785,4 +876,53 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     });
+
+    // 添加欢迎功能样式
+    const additionalStyles = document.createElement('style');
+    additionalStyles.textContent = `
+        .welcome-features {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .feature {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            padding: 15px;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(96, 165, 250, 0.08));
+            border-radius: 10px;
+            width: 120px;
+            transition: all 0.3s ease;
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.1);
+        }
+        
+        .feature i {
+            font-size: 2rem;
+            color: #3b82f6;
+        }
+        
+        .feature span {
+            font-size: 0.9rem;
+            text-align: center;
+            color: #64748b;
+        }
+        
+        .welcome-message h2 {
+            color: #3b82f6;
+        }
+        
+        .welcome-message h2::after {
+            background: linear-gradient(90deg, #3b82f6, transparent);
+        }
+    `;
+    document.head.appendChild(additionalStyles);
 }); 

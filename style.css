@@ -1,16 +1,16 @@
 :root {
-    --primary-color: #4e54c8;
-    --secondary-color: #8f94fb;
-    --background-color: #f5f7fa;
-    --chat-bg: #f0f2f5;
-    --user-msg-bg: #e7f3ff;
+    --primary-color: #3b82f6;
+    --secondary-color: #60a5fa;
+    --background-color: #f8fafc;
+    --chat-bg: #f1f5f9;
+    --user-msg-bg: #dbeafe;
     --bot-msg-bg: #ffffff;
-    --text-color: #343a40;
-    --light-text: #6c757d;
-    --border-color: #e9ecef;
-    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --text-color: #1e293b;
+    --light-text: #64748b;
+    --border-color: #e2e8f0;
+    --card-shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
     --animation-duration: 0.3s;
-    --danger-color: #dc3545;
+    --danger-color: #ef4444;
 }
 
 * {
