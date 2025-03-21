@@ -370,14 +370,14 @@ document.addEventListener('DOMContentLoaded', function() {
     customStyles.textContent = `
         /* 头像替换 */
         .logo-icon {
-            background-image: url('https://img.picui.cn/free/2025/03/17/67d8459d88fbf.png') !important;
+            background-image: url('http://chat.ccccocccc.cc/favicon.png') !important;
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
         }
         
         .bot-avatar {
-            background-image: url('https://img.picui.cn/free/2025/03/17/67d8459d88fbf.png') !important;
+            background-image: url('http://chat.ccccocccc.cc/favicon.png') !important;
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
